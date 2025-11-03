@@ -7,11 +7,21 @@ if (localStorage.getItem("githubURL") !== null) {
   urlLink.value = localStorage.getItem("githubURL");
 }
 
+if (localStorage.getItem("username") !== null) {
+  username.value = localStorage.getItem("githubURL");
+}
+
+if (localStorage.getItem("repo") !== null) {
+  repo.value = localStorage.getItem("repo");
+}
+
 function send_data() {
   let isCorrect = false;
   if (username.value === "") {
       if (urlLink.value !== "") {
         localStorage.setItem("githubURL", urlLink.value);
+        localStorage.setItem("username", username.value);
+        localStorage.setItem("repo", repo.value);
         isCorrect = true;
       } else if (repo.value === "") {
         alert("Введите username и имя репозитория (или URL)!");
@@ -22,6 +32,8 @@ function send_data() {
         alert("Введите имя репозитория (или URL)!");
   } else {
       localStorage.setItem("githubURL", `https://github.com/${username.value}/${repo.value}`);
+      localStorage.setItem("username", username.value);
+      localStorage.setItem("repo", repo.value);
       isCorrect = true;
   }
 
