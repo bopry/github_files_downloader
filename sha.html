@@ -17,15 +17,14 @@
     </div>
 
     <header>
-        <h2>Просто введите ваш <span>username</span> и <span>название репозитория</span> GitHub</h2>
-        <input id="username" type="text" placeholder="Username"><br>
-        <input id="repo" type="text" placeholder="Название репозитория">
-        <p>Так же вы можете просто ввести URL</p>
-        <input id="url-link" type="text" placeholder="https://github.com/...">
+        <h2>Просто вставьте SHA в поле</h2>
+        <input id="sha" type="text" placeholder="SHA">
+        <h2>Введите полное имя файлa</h2>
+        <input id="file-name" type="text" placeholder="index.html">
     </header>
     
     <div class="send-bnt-area">
-        <button onclick="send_data()">Отправить</button>
+          <button onclick="download_sha()">Скачать файл</button>
     </div>
     
     <div class="aside-settings hidden">

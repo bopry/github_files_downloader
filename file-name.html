@@ -17,15 +17,13 @@
     </div>
 
     <header>
-        <h2>Просто введите ваш <span>username</span> и <span>название репозитория</span> GitHub</h2>
-        <input id="username" type="text" placeholder="Username"><br>
-        <input id="repo" type="text" placeholder="Название репозитория">
-        <p>Так же вы можете просто ввести URL</p>
-        <input id="url-link" type="text" placeholder="https://github.com/...">
+        <h2>Теперь вы перейдете к <span>коммитам</span> выбраного репозитория</h2>
+        <h3>Вы должны будете скопировать SHA (ID коммита)</h3>
+        <h3>ВНИМАНИЕ!!! Сайт свернется, чтоб вернутся, найдите его во вкладках</h3>
     </header>
     
     <div class="send-bnt-area">
-        <button onclick="send_data()">Отправить</button>
+          <button onclick="open_github_commits()">Открыть</button>
     </div>
     
     <div class="aside-settings hidden">
