@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+@keyframes zoom {
+    0% {
+        width: 40px;
+        height: 40px;
+    }
+    50% {
+        width: 43px;
+        height: 43px;
+    }
+    100% {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+body {
+    background-color: #eee;
+}
+
+#top-area {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-area div {
+    position: relative;
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    transition: 0.3s;
+    transform: scale(1) rotate(0deg);
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;    
+        border-radius: 50%;
+        filter: blur(8px);
+        z-index: -1;
+    }
+}
+/*
+.button-area {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f003;
+}
+*/
+#top-area div.animate {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.block {
+    margin: 10px;
+    background-color: #0001;
+    padding: 10px;
+    border: solid 1px #0001;
+    border-radius: 15px;
+}
+
+.aside-settings {
+    border-radius: 15px;
+    border: solid 1px #7771;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 50vw;
+    transform: translate(-50%,10px) scaleX(0);
+    max-width: 200px;
+    background-color: #fff8;
+    backdrop-filter: blur(10px);
+    transition: .3s;
+}
+
+.aside-settings svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    filter: contrast(0);
+}
+
+.aside-settings.show {
+    transform: translate(0%,10px) scaleX(1);
+}
+/*
+@media (hover: none) {
+    #top-area button:hover {
+        animation: zoom 0.5s;
+    }
+}*/
